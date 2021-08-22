@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://www.shenjunyq.xyz/</id>
+  <id>http://0.0.0.0:4000/</id>
   <title>神骏的blog</title>
   <subtitle>一个关于生信的blog。 A blog about bioinformatics.</subtitle>
-  <updated>2021-08-22T17:39:42+08:00</updated>
+  <updated>2021-08-22T23:38:53+08:00</updated>
   <author>
     <name>conanyangqun</name>
-    <uri>http://www.shenjunyq.xyz/</uri>
+    <uri>http://0.0.0.0:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://www.shenjunyq.xyz/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="zh-CN"
-    href="http://www.shenjunyq.xyz/"/>
+    href="http://0.0.0.0:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
   <rights> © 2021 conanyangqun </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,56 @@
 
   
   <entry>
+    <title>测序时代的SV</title>
+    <link href="http://0.0.0.0:4000/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/" rel="alternate" type="text/html" title="测序时代的SV" />
+    <published>2021-08-22T23:19:00+08:00</published>
+  
+    <updated>2021-08-22T23:19:00+08:00</updated>
+  
+    <id>http://0.0.0.0:4000/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/</id>
+    <content src="http://0.0.0.0:4000/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/" />
+    <author>
+      <name>conanyangqun</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      测序时代的SV
+
+
+  文献笔记初稿，有诸多语句不顺之处。感兴趣的戳参考中的原文链接。
+
+
+结构变异的大小通常超过50bp，包括非平衡的拷贝数变异（缺失、重复、插入）、平衡的结构变异你（倒位、染色体内和染色体间易位），移动元件（mobile element）插入，多等位基因（multi-allelic CNVs，拷贝数高度变化）、片段重复（segmental duplication）、复杂重排。
+
+算法集成
+
+基于测序的SV检测主要是利用样本和参考基因组之间不一致的比对信号，例如read-pair方法使用双端reads的方向和距离，read-depth方法使用depth的差异，split-read方法使用跨SV断点的比对，de novo或local assembly将reads组装成contig，然后与ref进行比对。BreakDancer、CNVnator、PEMer等早期SV检测...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>Hello Blog</title>
-    <link href="http://www.shenjunyq.xyz/posts/Hello_Blog/" rel="alternate" type="text/html" title="Hello Blog" />
+    <link href="http://0.0.0.0:4000/posts/Hello_Blog/" rel="alternate" type="text/html" title="Hello Blog" />
     <published>2021-08-22T17:33:00+08:00</published>
   
     <updated>2021-08-22T17:33:00+08:00</updated>
   
-    <id>http://www.shenjunyq.xyz/posts/Hello_Blog/</id>
-    <content src="http://www.shenjunyq.xyz/posts/Hello_Blog/" />
+    <id>http://0.0.0.0:4000/posts/Hello_Blog/</id>
+    <content src="http://0.0.0.0:4000/posts/Hello_Blog/" />
     <author>
       <name>shenjun</name>
     </author>

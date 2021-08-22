@@ -4,6 +4,8 @@
 
 <html lang="zh-CN" 
   
+    mode="light"
+  
 >
 
   <!--
@@ -22,17 +24,17 @@
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="一枚生物信息菜狗子，在不断的打怪升级中。借助独立博客记录学习心得、日常感悟，让信息流的输入、内化、输出形成闭环。" />
 <meta property="og:description" content="一枚生物信息菜狗子，在不断的打怪升级中。借助独立博客记录学习心得、日常感悟，让信息流的输入、内化、输出形成闭环。" />
-<link rel="canonical" href="http://www.shenjunyq.xyz/about/" />
-<meta property="og:url" content="http://www.shenjunyq.xyz/about/" />
+<link rel="canonical" href="http://0.0.0.0:4000/about/" />
+<meta property="og:url" content="http://0.0.0.0:4000/about/" />
 <meta property="og:site_name" content="神骏的blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-08-22T17:39:42+08:00" />
+<meta property="article:published_time" content="2021-08-22T23:38:53+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <meta name="twitter:site" content="@conanyangqun" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"headline":"About","dateModified":"2021-08-22T17:39:42+08:00","datePublished":"2021-08-22T17:39:42+08:00","sameAs":["https://github.com/conanyangqun"],"@type":"WebSite","description":"一枚生物信息菜狗子，在不断的打怪升级中。借助独立博客记录学习心得、日常感悟，让信息流的输入、内化、输出形成闭环。","url":"http://www.shenjunyq.xyz/about/","name":"conanyangqun","@context":"https://schema.org"}</script>
+{"headline":"About","dateModified":"2021-08-22T23:38:53+08:00","datePublished":"2021-08-22T23:38:53+08:00","sameAs":["https://github.com/conanyangqun"],"@type":"WebSite","description":"一枚生物信息菜狗子，在不断的打怪升级中。借助独立博客记录学习心得、日常感悟，让信息流的输入、内化、输出形成闭环。","url":"http://0.0.0.0:4000/about/","name":"conanyangqun","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -175,7 +177,7 @@
 
       
       <a href="https://github.com/conanyangqun" aria-label="github"
-        class="order-3"
+        
         target="_blank" rel="noopener">
         <i class="fab fa-github-alt"></i>
       </a>
@@ -187,7 +189,7 @@
       
       <a href="
           javascript:location.href = 'mailto:' + ['conanyangqun','163dotcom'].join('@')" aria-label="email"
-        class="order-4"
+        
         >
         <i class="fas fa-envelope"></i>
       </a>
@@ -198,7 +200,7 @@
 
       
       <a href="/feed.xml" aria-label="rss"
-        class="order-5"
+        
         >
         <i class="fas fa-rss"></i>
       </a>
@@ -206,159 +208,6 @@
 
     
 
-    
-      
-        <span class="icon-border order-2"></span>
-      
-
-      <span id="mode-toggle-wrapper" class="order-1">
-        <!--
-  Switch the mode between dark and light.
--->
-
-<i class="mode-toggle fas fa-adjust"></i>
-
-<script type="text/javascript">
-
-  class ModeToggle {
-    static get MODE_KEY() { return "mode"; }
-    static get DARK_MODE() { return "dark"; }
-    static get LIGHT_MODE() { return "light"; }
-
-    constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      }
-
-      var self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addListener(function() {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
-        }
-
-        self.updateMermaid();
-      });
-
-    } /* constructor() */
-
-
-    setDark() {
-      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-    }
-
-    setLight() {
-      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-    }
-
-    clearMode() {
-      $('html').removeAttr(ModeToggle.MODE_KEY);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
-    }
-
-    get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); }
-
-    get isSysDarkPrefer() { return this.sysDarkPrefers.matches; }
-
-    get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; }
-
-    get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; }
-
-    get hasMode() { return this.mode != null; }
-
-    get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
-
-    /* get the current mode on screen */
-    get modeStatus() {
-      if (this.isDarkMode
-        || (!this.hasMode && this.isSysDarkPrefer) ) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.LIGHT_MODE;
-      }
-    }
-
-    updateMermaid() {
-      if (typeof mermaid !== "undefined") {
-        let expectedTheme = (this.modeStatus === ModeToggle.DARK_MODE? "dark" : "default");
-        let config = { theme: expectedTheme };
-
-        /* re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */
-        $(".mermaid").each(function() {
-          let svgCode = $(this).prev().children().html();
-          $(this).removeAttr("data-processed");
-          $(this).html(svgCode);
-        });
-
-        mermaid.initialize(config);
-        mermaid.init(undefined, ".mermaid");
-      }
-    }
-
-    flipMode() {
-      if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
-            this.clearMode();
-          } else {
-            this.setLight();
-          }
-
-        } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
-        }
-
-      } else {
-        if (this.isSysDarkPrefer) {
-          this.setLight();
-        } else {
-          this.setDark();
-        }
-      }
-
-      this.updateMermaid();
-
-    } /* flipMode() */
-
-  } /* ModeToggle */
-
-  let toggle = new ModeToggle();
-
-  $(".mode-toggle").click(function() {
-
-    toggle.flipMode();
-
-  });
-
-</script>
-
-      </span>
     
 
   </div> <!-- .sidebar-bottom -->
@@ -607,8 +456,48 @@
 
 
 
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
 
 
+
+  
+    <div id="access-tags">
+      <span>热门标签</span>
+      <div class="d-flex flex-wrap mt-3 mb-1 mr-3">
+
+      
+        
+        <a class="post-tag" href="/tags/sv/">sv</a>
+      
+        
+        <a class="post-tag" href="/tags/%E6%96%87%E7%8C%AE%E8%A7%A3%E8%AF%BB/">文献解读</a>
+      
+
+      </div>
+    </div>
   
   </div> <!-- .access -->
 
@@ -685,8 +574,39 @@
 
 
 
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
 
 
+
+      
+        
+        <a class="post-tag" href="/tags/sv/">sv</a>
+      
+        
+        <a class="post-tag" href="/tags/%E6%96%87%E7%8C%AE%E8%A7%A3%E8%AF%BB/">文献解读</a>
       
 
     </div>
@@ -721,7 +641,7 @@ SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('search-results'),
   json: '/assets/js/data/search.json',
-  searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0">  <a href="http://www.shenjunyq.xyz{url}">{title}</a>  <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">    {categories}    {tags}  </div>  <p>{snippet}</p></div>',
+  searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0">  <a href="http://0.0.0.0:4000{url}">{title}</a>  <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">    {categories}    {tags}  </div>  <p>{snippet}</p></div>',
   noResultsText: '<p class="mt-5">Oops! No result founds.</p>',
   templateMiddleware: function(prop, value, template) {
     if (prop === 'categories') {

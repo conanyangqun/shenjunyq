@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "测序时代的SV",
+    "url": "/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/",
+    "categories": "",
+    "tags": "sv, 文献解读",
+    "date": "2021-08-22 23:19:00 +0800",
+    
+
+
+
+
+
+    "snippet": "测序时代的SV  文献笔记初稿，有诸多语句不顺之处。感兴趣的戳参考中的原文链接。结构变异的大小通常超过50bp，包括非平衡的拷贝数变异（缺失、重复、插入）、平衡的结构变异你（倒位、染色体内和染色体间易位），移动元件（mobile element）插入，多等位基因（multi-allelic CNVs，拷贝数高度变化）、片段重复（segmental duplication）、复杂重排。算法集成基于测序的SV检测主要是利用样本和参考基因组之间不一致的比对信号，例如read-pair方法使用双端reads的方向和距离，read-depth方法使用depth的差异，split-read方法使用跨..."
+  },
+  
+  {
     "title": "Hello Blog",
     "url": "/posts/Hello_Blog/",
     "categories": "",
