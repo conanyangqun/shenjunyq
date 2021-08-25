@@ -45,7 +45,7 @@ const resource = [
 const allowedDomains = [
   
 
-  '0.0.0.0:4000',
+  'www.shenjunyq.xyz',
 
   'fonts.gstatic.com',
   'fonts.googleapis.com',

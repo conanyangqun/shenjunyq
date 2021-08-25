@@ -2,6 +2,7 @@ export JEKYLL_VERSION=latest
 
 docker run --rm \
   --volume="$PWD:/srv/jekyll" \
+  -e "TZ=Asia/Shanghai" \
   -it jekyll/jekyll:$JEKYLL_VERSION \
   jekyll build
 

@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "不同来源hg19参考基因组的区别",
+    "url": "/posts/%E4%B8%8D%E5%90%8C%E6%9D%A5%E6%BA%90hg19%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB/",
+    "categories": "",
+    "tags": "参考基因组",
+    "date": "2021-08-25 22:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "不同来源hg19参考基因组的区别  注意参考资料的发布时间和比较的参考基因组版本，broad的文章相对比较新。基因组组装结果有一些不同的来源，即不同的“hg19”参考基因组版本。常用的有以下4个版本：      hg19（ucsc.hg19.fasta）:UCSC基于GRCh37创建的参考基因组，有一些变更，包括contig的名称及部分序列变化。        b37 （Homo_sapiens_assembly19.fasta）：Broad基于GRCh37创建的参考基因组，一般Broad内部使用hg19参考时都会使用b37。包括contig的变化及序列变化。特别的，有一些低质量的碱基被..."
+  },
+  
+  {
     "title": "测序时代的SV",
     "url": "/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/",
     "categories": "",

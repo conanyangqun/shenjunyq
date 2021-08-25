@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://0.0.0.0:4000/</id>
+  <id>http://www.shenjunyq.xyz/</id>
   <title>神骏的blog</title>
   <subtitle>一个关于生信的blog。 A blog about bioinformatics.</subtitle>
-  <updated>2021-08-22T23:38:53+08:00</updated>
+  <updated>2021-08-25T22:37:35+08:00</updated>
   <author>
     <name>conanyangqun</name>
-    <uri>http://0.0.0.0:4000/</uri>
+    <uri>http://www.shenjunyq.xyz/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://0.0.0.0:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://www.shenjunyq.xyz/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="zh-CN"
-    href="http://0.0.0.0:4000/"/>
+    href="http://www.shenjunyq.xyz/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
   <rights> © 2021 conanyangqun </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,62 @@
 
   
   <entry>
+    <title>不同来源hg19参考基因组的区别</title>
+    <link href="http://www.shenjunyq.xyz/posts/%E4%B8%8D%E5%90%8C%E6%9D%A5%E6%BA%90hg19%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="alternate" type="text/html" title="不同来源hg19参考基因组的区别" />
+    <published>2021-08-25T22:00:00+08:00</published>
+  
+    <updated>2021-08-25T22:00:00+08:00</updated>
+  
+    <id>http://www.shenjunyq.xyz/posts/%E4%B8%8D%E5%90%8C%E6%9D%A5%E6%BA%90hg19%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <content src="http://www.shenjunyq.xyz/posts/%E4%B8%8D%E5%90%8C%E6%9D%A5%E6%BA%90hg19%E5%8F%82%E8%80%83%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB/" />
+    <author>
+      <name>conanyangqun</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      不同来源hg19参考基因组的区别
+
+
+  注意参考资料的发布时间和比较的参考基因组版本，broad的文章相对比较新。
+
+
+基因组组装结果有一些不同的来源，即不同的“hg19”参考基因组版本。常用的有以下4个版本：
+
+
+  
+    hg19（ucsc.hg19.fasta）:UCSC基于GRCh37创建的参考基因组，有一些变更，包括contig的名称及部分序列变化。
+  
+  
+    b37 （Homo_sapiens_assembly19.fasta）：Broad基于GRCh37创建的参考基因组，一般Broad内部使用hg19参考时都会使用b37。包括contig的变化及序列变化。特别的，有一些低质量的碱基被屏蔽了，但是目前没有详细的比较。
+  
+  
+    humanG1Kv37 (human_g1k_v37.fasta)：类似于b37，但是不包含decoy序列（NC0076...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>测序时代的SV</title>
-    <link href="http://0.0.0.0:4000/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/" rel="alternate" type="text/html" title="测序时代的SV" />
+    <link href="http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/" rel="alternate" type="text/html" title="测序时代的SV" />
     <published>2021-08-22T23:19:00+08:00</published>
   
     <updated>2021-08-22T23:19:00+08:00</updated>
   
-    <id>http://0.0.0.0:4000/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/</id>
-    <content src="http://0.0.0.0:4000/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/" />
+    <id>http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/</id>
+    <content src="http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/" />
     <author>
       <name>conanyangqun</name>
     </author>
@@ -63,13 +111,13 @@
   
   <entry>
     <title>Hello Blog</title>
-    <link href="http://0.0.0.0:4000/posts/Hello_Blog/" rel="alternate" type="text/html" title="Hello Blog" />
+    <link href="http://www.shenjunyq.xyz/posts/Hello_Blog/" rel="alternate" type="text/html" title="Hello Blog" />
     <published>2021-08-22T17:33:00+08:00</published>
   
     <updated>2021-08-22T17:33:00+08:00</updated>
   
-    <id>http://0.0.0.0:4000/posts/Hello_Blog/</id>
-    <content src="http://0.0.0.0:4000/posts/Hello_Blog/" />
+    <id>http://www.shenjunyq.xyz/posts/Hello_Blog/</id>
+    <content src="http://www.shenjunyq.xyz/posts/Hello_Blog/" />
     <author>
       <name>shenjun</name>
     </author>
