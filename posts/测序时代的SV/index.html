@@ -4,8 +4,6 @@
 
 <html lang="zh-CN" 
   
-    mode="light"
-  
 >
 
   <!--
@@ -46,7 +44,7 @@
 <meta name="twitter:site" content="@conanyangqun" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"headline":"测序时代的SV","dateModified":"2021-08-22T23:19:00+08:00","datePublished":"2021-08-22T23:19:00+08:00","@type":"BlogPosting","description":"测序时代的SV","url":"http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/"},"@context":"https://schema.org"}</script>
+{"url":"http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/"},"@type":"BlogPosting","datePublished":"2021-08-22T23:19:00+08:00","description":"测序时代的SV","headline":"测序时代的SV","dateModified":"2021-08-22T23:19:00+08:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -192,7 +190,7 @@
 
       
       <a href="https://github.com/conanyangqun" aria-label="github"
-        
+        class="order-3"
         target="_blank" rel="noopener">
         <i class="fab fa-github-alt"></i>
       </a>
@@ -203,8 +201,8 @@
 
       
       <a href="
-          javascript:location.href = 'mailto:' + ['conanyangqun','163dotcom'].join('@')" aria-label="email"
-        
+          javascript:location.href = 'mailto:' + ['yangqunxinli','163.com'].join('@')" aria-label="email"
+        class="order-4"
         >
         <i class="fas fa-envelope"></i>
       </a>
@@ -215,7 +213,7 @@
 
       
       <a href="/feed.xml" aria-label="rss"
-        
+        class="order-5"
         >
         <i class="fas fa-rss"></i>
       </a>
@@ -223,6 +221,159 @@
 
     
 
+    
+      
+        <span class="icon-border order-2"></span>
+      
+
+      <span id="mode-toggle-wrapper" class="order-1">
+        <!--
+  Switch the mode between dark and light.
+-->
+
+<i class="mode-toggle fas fa-adjust"></i>
+
+<script type="text/javascript">
+
+  class ModeToggle {
+    static get MODE_KEY() { return "mode"; }
+    static get DARK_MODE() { return "dark"; }
+    static get LIGHT_MODE() { return "light"; }
+
+    constructor() {
+      if (this.hasMode) {
+        if (this.isDarkMode) {
+          if (!this.isSysDarkPrefer) {
+            this.setDark();
+          }
+        } else {
+          if (this.isSysDarkPrefer) {
+            this.setLight();
+          }
+        }
+      }
+
+      var self = this;
+
+      /* always follow the system prefers */
+      this.sysDarkPrefers.addListener(function() {
+        if (self.hasMode) {
+          if (self.isDarkMode) {
+            if (!self.isSysDarkPrefer) {
+              self.setDark();
+            }
+
+          } else {
+            if (self.isSysDarkPrefer) {
+              self.setLight();
+            }
+          }
+
+          self.clearMode();
+        }
+
+        self.updateMermaid();
+      });
+
+    } /* constructor() */
+
+
+    setDark() {
+      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+    }
+
+    setLight() {
+      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    }
+
+    clearMode() {
+      $('html').removeAttr(ModeToggle.MODE_KEY);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+    }
+
+    get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); }
+
+    get isSysDarkPrefer() { return this.sysDarkPrefers.matches; }
+
+    get isDarkMode() { return this.mode == ModeToggle.DARK_MODE; }
+
+    get isLightMode() { return this.mode == ModeToggle.LIGHT_MODE; }
+
+    get hasMode() { return this.mode != null; }
+
+    get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
+
+    /* get the current mode on screen */
+    get modeStatus() {
+      if (this.isDarkMode
+        || (!this.hasMode && this.isSysDarkPrefer) ) {
+        return ModeToggle.DARK_MODE;
+      } else {
+        return ModeToggle.LIGHT_MODE;
+      }
+    }
+
+    updateMermaid() {
+      if (typeof mermaid !== "undefined") {
+        let expectedTheme = (this.modeStatus === ModeToggle.DARK_MODE? "dark" : "default");
+        let config = { theme: expectedTheme };
+
+        /* re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */
+        $(".mermaid").each(function() {
+          let svgCode = $(this).prev().children().html();
+          $(this).removeAttr("data-processed");
+          $(this).html(svgCode);
+        });
+
+        mermaid.initialize(config);
+        mermaid.init(undefined, ".mermaid");
+      }
+    }
+
+    flipMode() {
+      if (this.hasMode) {
+        if (this.isSysDarkPrefer) {
+          if (this.isLightMode) {
+            this.clearMode();
+          } else {
+            this.setLight();
+          }
+
+        } else {
+          if (this.isDarkMode) {
+            this.clearMode();
+          } else {
+            this.setDark();
+          }
+        }
+
+      } else {
+        if (this.isSysDarkPrefer) {
+          this.setLight();
+        } else {
+          this.setDark();
+        }
+      }
+
+      this.updateMermaid();
+
+    } /* flipMode() */
+
+  } /* ModeToggle */
+
+  let toggle = new ModeToggle();
+
+  $(".mode-toggle").click(function() {
+
+    toggle.flipMode();
+
+  });
+
+</script>
+
+      </span>
     
 
   </div> <!-- .sidebar-bottom -->
@@ -997,6 +1148,33 @@
 
 </div>
 
+
+    
+      <!--
+  The Disqus lazy loading.
+  Powered by: <https://github.com/osvaldasvalutis/disqusLoader.js>
+-->
+
+<div id="disqus" class="pt-2 pb-2">
+  <p class="text-center text-muted small pb-5">
+    Comments powered by <a href="https://disqus.com/">Disqus</a>.
+  </p>
+</div>
+
+<script src="/assets/js/lib/jquery.disqusloader.min.js"></script>
+<script>
+  const options = {
+    scriptUrl: '//shenjunyq.disqus.com/embed.js',
+
+    disqusConfig: function() {
+      this.page.title = '测序时代的SV';
+      this.page.url = 'http://www.shenjunyq.xyz/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/';
+      this.page.identifier = '/posts/%E6%B5%8B%E5%BA%8F%E6%97%B6%E4%BB%A3%E7%9A%84SV/';
+    }
+  };
+
+  $.disqusLoader('#disqus', options);
+</script>
 
     
 
