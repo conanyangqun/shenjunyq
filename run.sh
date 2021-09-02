@@ -26,5 +26,6 @@ docker run --rm \
   --volume="$PWD:/srv/jekyll" \
   --publish 4000:4000 \
   -e "TZ=Asia/Shanghai" \
+  -e "JEKYLL_ENV=production" \
   -it jekyll/jekyll:$JEKYLL_VERSION \
   /bin/bash
