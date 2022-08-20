@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://conanyangqun.github.io/shenjunyq//sitemap.xml
+Sitemap: https://conanyangqun.github.io/shenjunyq//shenjunyq/sitemap.xml
